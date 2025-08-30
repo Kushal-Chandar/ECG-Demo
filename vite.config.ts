@@ -9,12 +9,12 @@ export default defineConfig(({ mode }) => ({
     port: 8080,
   },
   plugins: [
-    react(),
-    mode === 'development'
-  ].filter(Boolean),
+    react()
+  ],
+  base: "/ECG-Demo/",
   resolve: {
     alias: {
-      "@": path.resolve(__dirname, "./src"),
+      "@": path.resolve(__dirname, "src"),
     },
   },
 }));
